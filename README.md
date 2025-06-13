@@ -1,12 +1,46 @@
-# React + Vite
+# 🚀 Suraj Rajput - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio built using **React.js, Tailwind CSS, and Vite**!  
+I'm a passionate **Full-Stack (MERN) Developer** with a focus on building fast, responsive, and scalable web applications. This portfolio highlights my journey, skills, projects, and contact details.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 About Me
 
-## Expanding the ESLint configuration
+Hi, I'm **Suraj Rajput**, a BCA undergraduate from Surat, Gujarat.  
+With hands-on experience in React.js, Node.js, Express.js, and MongoDB, I specialize in crafting user-centric web applications using modern UI/UX design principles.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔥 Features
+
+- ✨ Beautiful Hero Section with Typewriter Effect
+- 💼 Responsive Skills & Technologies section with proficiency bars
+- 📂 Projects Showcase (Live Demo + GitHub Code)
+- 🎓 Education Timeline with SGPA breakdown
+- 📞 Contact Form with social media integration
+- 🌓 Dark-themed, gradient-rich UI using Tailwind CSS
+- ✅ Fully Responsive for Desktop, Tablet & Mobile
+- ⚙️ PWA Support (Installable Web App)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS
+- **Backend (Projects):** Node.js, Express.js, MongoDB
+- **Tooling:** Vite, GitHub, Netlify/Vercel
+- **Design:** Custom Gradient UI + Glassmorphism
+
+---
+
+## 📸 Live Demo
+
+🔗 [View Live Portfolio](https://your-portfolio-link.vercel.app)
+
+> Replace with your live deployment link (e.g. Vercel, Netlify, GitHub Pages)
+
+---
+
+## 📁 Project Structure
+
