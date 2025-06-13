@@ -43,4 +43,26 @@ With hands-on experience in React.js, Node.js, Express.js, and MongoDB, I specia
 ---
 
 ## 📁 Project Structure
+/src
+├── components/
+├── assets/
+├── data/
+├── App.jsx
+└── main.jsx
+/public
+├── pwa-icons, favicon, manifest
+
+---
+
+## 📬 Let's Connect
+
+📧 surajrajput221221@gmail.com  
+📞 +91 9510190352  
+🌐 [LinkedIn](https://linkedin.com/in/suraj-rajput) | [GitHub](https://github.com/Suriya2023)
+
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
 
