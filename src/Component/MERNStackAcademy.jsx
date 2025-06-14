@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.jpeg'
-
+import Screenshot1 from '../assets/e1.png';
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -10,6 +10,7 @@ export default function MERNStackAcademy() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSection, setActiveSection] = useState('about');
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     // Simulate full page load (aap chahe to yahan API ya image load bhi check kar sakte ho)
@@ -51,7 +52,6 @@ export default function MERNStackAcademy() {
   }, []);
 
   const projects = [
-
     {
       "id": 1,
       "title": "E-Commerce Platform",
@@ -59,10 +59,11 @@ export default function MERNStackAcademy() {
       "description": "Complete e-commerce solution with user authentication, payment integration, admin dashboard, and real-time inventory management.",
       "tech": ["React.js", "Node.js", "MongoDB", "Express.js"],
       "status": "COMPLETED",
-      "github": "#",
-      "live": "#",
+      "github": "https://github.com/Suriya2023/Ecoomerce-Frontennd-Backend",
+      "live": "https://ecommerce-store-five-jet.vercel.app/",
       "image": "🛒",
       "color": "from-blue-500/10 to-purple-600/10",
+      "screenshot": Screenshot1,
       "features": [
         "User Authentication",
         "Payment Gateway",
@@ -83,6 +84,7 @@ export default function MERNStackAcademy() {
       "live": "#",
       "image": "📊",
       "color": "from-green-500/10 to-cyan-600/10",
+      "screenshot": "comming",
       "features": [
         "Real-time Analytics",
         "Data Visualization",
@@ -103,6 +105,7 @@ export default function MERNStackAcademy() {
       "live": "#",
       "image": "✅",
       "color": "from-purple-500/10 to-pink-600/10",
+      "screenshot": "URL_TO_SCREENSHOT_3",
       "features": [
         "Task Assignment",
         "Progress Tracking",
@@ -123,6 +126,7 @@ export default function MERNStackAcademy() {
       "live": "#",
       "image": "📚",
       "color": "from-yellow-400/10 to-orange-500/10",
+      "screenshot": "URL_TO_SCREENSHOT_4",
       "features": [
         "Course Listing",
         "Video Player",
@@ -142,6 +146,7 @@ export default function MERNStackAcademy() {
       "live": "#",
       "image": "🎥",
       "color": "from-red-500/10 to-black/10",
+      "screenshot": "URL_TO_SCREENSHOT_5",
       "features": [
         "User Login",
         "Movie Categories",
@@ -161,6 +166,7 @@ export default function MERNStackAcademy() {
       "live": "#",
       "image": "🔧",
       "color": "from-indigo-500/10 to-yellow-500/10",
+      "screenshot": "URL_TO_SCREENSHOT_6",
       "features": [
         "Service Categories",
         "Booking System",
@@ -169,8 +175,7 @@ export default function MERNStackAcademy() {
         "Contact Integration"
       ]
     }
-  ]
-
+  ];
 
   const techStack = [
     { name: "MongoDB", icon: Database, color: "from-green-400 to-green-600", level: "85%" },
@@ -734,14 +739,26 @@ export default function MERNStackAcademy() {
                             </div>
 
                             <div data-aos="zoom-in" className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                              <button className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                              <button
+                                onClick={() => {
+                                  window.location.href = project.github;
+                                }}
+                                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105"
+                              >
                                 <Github className="w-4 h-4 md:w-5 md:h-5" />
                                 <span className="font-medium text-sm md:text-base">View Code</span>
                               </button>
-                              <button className="flex items-center justify-center space-x-2 border-2 border-cyan-400/50 text-cyan-400 px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:border-cyan-400 hover:bg-cyan-400/10 transition-all">
+
+                              <button
+                                onClick={() => {
+                                  window.location.href = project.live;
+                                }}
+                                className="flex items-center justify-center space-x-2 border-2 border-cyan-400/50 text-cyan-400 px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:border-cyan-400 hover:bg-cyan-400/10 transition-all"
+                              >
                                 <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
                                 <span className="font-medium text-sm md:text-base">Live Demo</span>
                               </button>
+
                             </div>
                           </div>
 
@@ -758,9 +775,10 @@ export default function MERNStackAcademy() {
                                   <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
                                 </div>
                               </div>
-                              <div className="relative p-y-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
-                                <img style={{height:'auto'}}
-                                  src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-7284-61f5-a774-da1412b7629c/raw?se=2025-06-14T07%3A06%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=9d80bc7c-e3f9-590a-a476-d93b4e4b0a2d&skoid=5c72dd08-68ae-4091-b4e1-40ccec0693ae&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-13T22%3A06%3A34Z&ske=2025-06-14T22%3A06%3A34Z&sks=b&skv=2024-08-04&sig=j8BCZxhWMb5DG4HIjul/NWJB440qz9YaWGE2nkENdsE%3D"
+                              <div className="relative py-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
+                                <img
+                                  style={{ height: 'auto' }}
+                                  src={project.screenshot}
                                   alt="Project Preview"
                                   data-aos="zoom-in"
                                   className="absolute inset-0 w-full h-full object-cover"
