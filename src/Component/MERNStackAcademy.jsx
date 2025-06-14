@@ -305,9 +305,7 @@ export default function MERNStackAcademy() {
                     <span>Get In Touch</span>
                   </a>
 
-                  <a
-                    href="/SurajResume
-"
+                  <a  href="/suraj-resume.pdf"
                     download
                     className="border-2 border-cyan-400/50 text-cyan-400 px-8 py-4 rounded-full hover:bg-cyan-400/10 transition-all flex items-center justify-center space-x-2 hover:scale-105"
                   >
