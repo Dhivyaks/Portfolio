@@ -9,6 +9,18 @@ export default function MERNStackAcademy() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSection, setActiveSection] = useState('about');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate full page load (aap chahe to yahan API ya image load bhi check kar sakte ho)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 second tak loading dikhana
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
 
   // Track active section for mobile navigation
   useEffect(() => {
@@ -160,7 +172,20 @@ export default function MERNStackAcademy() {
     }
     setIsMenuOpen(false);
   };
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-mono">
+        {/* Glowing spinner */}
+        <div className="w-20 h-20 border-4 border-t-transparent border-b-transparent border-l-cyan-400 border-r-pink-500 rounded-full animate-spin shadow-lg shadow-cyan-500/50 mb-6"></div>
 
+        {/* Typing effect */}
+        <div className="text-xl md:text-2xl text-cyan-300 loading-typing border-r-2 border-cyan-300 whitespace-nowrap overflow-hidden">
+          Booting up your experience...
+        </div>
+      </div>
+
+    );
+  }
   return (
     <div className="min-h-screen 
     bg-gradient-to-br   from-blue-900  via-black  to-red-900  pb-20 md:pb-0  " >
@@ -305,7 +330,7 @@ export default function MERNStackAcademy() {
                     <span>Get In Touch</span>
                   </a>
 
-                  <a  href="/suraj-resume.pdf"
+                  <a href="/suraj-resume.pdf"
                     download
                     className="border-2 border-cyan-400/50 text-cyan-400 px-8 py-4 rounded-full hover:bg-cyan-400/10 transition-all flex items-center justify-center space-x-2 hover:scale-105"
                   >
