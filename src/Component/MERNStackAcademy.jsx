@@ -484,7 +484,8 @@ export default function MERNStackAcademy() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v8m0 0l3.5-3.5M12 20l-3.5-3.5" />
                 </svg>
-                <span className="text-sm md:text-base group-hover:underline">Download Resume</span>
+               <a href="/suraj-resume.pdf"
+                    download  className="text-sm md:text-base group-hover:underline">Download Resume</a>
               </a>
 
             </div>
