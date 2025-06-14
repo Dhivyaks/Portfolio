@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.jpeg'
-import { SiFigma, SiOpenai, SiAdobe, SiJavascript } from "react-icons/si";
+ 
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -310,7 +310,7 @@ export default function MERNStackAcademy() {
               >
                 <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 px-4 py-2 rounded-full mb-6">
                   <Zap className="w-5 h-5 text-cyan-400" />
-                  <span className="text-cyan-400 text-sm font-medium">Front-End Developer</span>
+                  <span className="text-cyan-400 text-sm font-medium">Full Stack (MERN) Developer</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
@@ -484,8 +484,8 @@ export default function MERNStackAcademy() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v8m0 0l3.5-3.5M12 20l-3.5-3.5" />
                 </svg>
-               <a href="/suraj-resume.pdf"
-                    download  className="text-sm md:text-base group-hover:underline">Download Resume</a>
+                <a href="/suraj-resume.pdf"
+                  download className="text-sm md:text-base group-hover:underline">Download Resume</a>
               </a>
 
             </div>
@@ -675,7 +675,7 @@ export default function MERNStackAcademy() {
                                   <div data-aos="zoom-in" className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full"></div>
                                 </div>
                                 <div className="flex-1 bg-slate-700/50 rounded-full h-6 md:h-8 flex items-center px-3 md:px-4">
-                                  <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">localhost:3000</span>
+                                  <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
                                 </div>
                               </div>
                               <div className="bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 flex items-center justify-center border border-white/5">
