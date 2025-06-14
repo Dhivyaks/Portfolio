@@ -174,7 +174,7 @@ export default function MERNStackAcademy() {
   };
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-mono">
+      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black text-white font-mono">
         {/* Glowing spinner */}
         <div className="w-20 h-20 border-4 border-t-transparent border-b-transparent border-l-cyan-400 border-r-pink-500 rounded-full animate-spin shadow-lg shadow-cyan-500/50 mb-6"></div>
 
