@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.jpeg'
- 
+
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -51,46 +51,126 @@ export default function MERNStackAcademy() {
   }, []);
 
   const projects = [
+
     {
-      id: 1,
-      title: "E-Commerce Platform",
-      subtitle: "Full Stack MERN Application",
-      description: "Complete e-commerce solution with user authentication, payment integration, admin dashboard, and real-time inventory management",
-      tech: ["React.js", "Node.js", "MongoDB", "Express.js"],
-      status: "COMPLETED",
-      github: "#",
-      live: "#",
-      image: "🛒",
-      color: "from-blue-500/10 to-purple-600/10",
-      features: ["User Authentication", "Payment Gateway", "Admin Dashboard", "Inventory Management", "Order Tracking", "Product Reviews"]
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "subtitle": "Full Stack MERN Application",
+      "description": "Complete e-commerce solution with user authentication, payment integration, admin dashboard, and real-time inventory management.",
+      "tech": ["React.js", "Node.js", "MongoDB", "Express.js"],
+      "status": "COMPLETED",
+      "github": "#",
+      "live": "#",
+      "image": "🛒",
+      "color": "from-blue-500/10 to-purple-600/10",
+      "features": [
+        "User Authentication",
+        "Payment Gateway",
+        "Admin Dashboard",
+        "Inventory Management",
+        "Order Tracking",
+        "Product Reviews"
+      ]
     },
     {
-      id: 2,
-      title: "Social Media Dashboard",
-      subtitle: "Real-time Analytics Platform",
-      description: "Interactive dashboard for social media analytics with real-time data visualization, user engagement metrics, and automated reporting",
-      tech: ["React.js", "Express.js", "MongoDB", "Socket.io"],
-      status: "IN PROGRESS",
-      github: "#",
-      live: "#",
-      image: "📊",
-      color: "from-green-500/10 to-cyan-600/10",
-      features: ["Real-time Analytics", "Data Visualization", "User Metrics", "Automated Reports", "Multi-platform", "Export Data"]
+      "id": 2,
+      "title": "Social Media Dashboard",
+      "subtitle": "Real-time Analytics Platform",
+      "description": "Interactive dashboard for social media analytics with real-time data visualization, user engagement metrics, and automated reporting.",
+      "tech": ["React.js", "Express.js", "MongoDB", "Socket.io"],
+      "status": "IN PROGRESS",
+      "github": "#",
+      "live": "#",
+      "image": "📊",
+      "color": "from-green-500/10 to-cyan-600/10",
+      "features": [
+        "Real-time Analytics",
+        "Data Visualization",
+        "User Metrics",
+        "Automated Reports",
+        "Multi-platform",
+        "Export Data"
+      ]
     },
     {
-      id: 3,
-      title: "Task Management App",
-      subtitle: "Collaborative Project Tool",
-      description: "Team collaboration platform with task assignment, progress tracking, file sharing, and integrated communication features",
-      tech: ["React.js", "Node.js", "MongoDB", "JWT"],
-      status: "COMPLETED",
-      github: "#",
-      live: "#",
-      image: "✅",
-      color: "from-purple-500/10 to-pink-600/10",
-      features: ["Task Assignment", "Progress Tracking", "File Sharing", "Team Chat", "Deadline Alerts", "Project Timeline"]
+      "id": 3,
+      "title": "Task Management App",
+      "subtitle": "Collaborative Project Tool",
+      "description": "Team collaboration platform with task assignment, progress tracking, file sharing, and integrated communication features.",
+      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
+      "status": "COMPLETED",
+      "github": "#",
+      "live": "#",
+      "image": "✅",
+      "color": "from-purple-500/10 to-pink-600/10",
+      "features": [
+        "Task Assignment",
+        "Progress Tracking",
+        "File Sharing",
+        "Team Chat",
+        "Deadline Alerts",
+        "Project Timeline"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Eduport Learning Platform",
+      "subtitle": "Online Course & Teaching App",
+      "description": "A modern education platform for online learning, video lessons, progress tracking, and teacher-student collaboration.",
+      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
+      "status": "IDEA",
+      "github": "#",
+      "live": "#",
+      "image": "📚",
+      "color": "from-yellow-400/10 to-orange-500/10",
+      "features": [
+        "Course Listing",
+        "Video Player",
+        "Progress Tracking",
+        "Instructor Panel",
+        "Student Dashboard"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Netflix Clone",
+      "subtitle": "Video Streaming Platform",
+      "description": "An OTT platform to browse, preview, and watch movies/TV shows with category filters and watchlist support.",
+      "tech": ["React.js", "Firebase", "TMDB API"],
+      "status": "IN PROGRESS",
+      "github": "#",
+      "live": "#",
+      "image": "🎥",
+      "color": "from-red-500/10 to-black/10",
+      "features": [
+        "User Login",
+        "Movie Categories",
+        "Watchlist",
+        "Trailer Preview",
+        "Dark Theme"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Service Finder App",
+      "subtitle": "Local Services Hiring Directory",
+      "description": "A platform for users to find and hire local professionals like electricians, tutors, drivers, and more.",
+      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
+      "status": "PLANNED",
+      "github": "#",
+      "live": "#",
+      "image": "🔧",
+      "color": "from-indigo-500/10 to-yellow-500/10",
+      "features": [
+        "Service Categories",
+        "Booking System",
+        "City-Based Search",
+        "User Reviews",
+        "Contact Integration"
+      ]
     }
-  ];
+  ]
+
 
   const techStack = [
     { name: "MongoDB", icon: Database, color: "from-green-400 to-green-600", level: "85%" },
@@ -476,7 +556,7 @@ export default function MERNStackAcademy() {
 
               {/* Resume */}
               <a
-                href="/src/assets/Suraj Resume.pdf"
+                href="/suraj-resume.pdf"
                 download
                 className="group flex items-center space-x-2 hover:scale-105 transition-transform"
                 title="Download Resume"
@@ -484,9 +564,9 @@ export default function MERNStackAcademy() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v8m0 0l3.5-3.5M12 20l-3.5-3.5" />
                 </svg>
-                <a href="/suraj-resume.pdf"
-                  download className="text-sm md:text-base group-hover:underline">Download Resume</a>
+                <span className="text-sm md:text-base group-hover:underline">Download Resume</span>
               </a>
+
 
             </div>
           </div>
@@ -678,12 +758,16 @@ export default function MERNStackAcademy() {
                                   <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
                                 </div>
                               </div>
-                              <div className="bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 flex items-center justify-center border border-white/5">
-                                <div className="text-center">
-                                  <Monitor data-aos="zoom-in" className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 text-cyan-400 mx-auto mb-2 md:mb-4" />
-                                  <p data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm lg:text-base">Live Preview</p>
-                                </div>
+                              <div className="relative p-y-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
+                                <img style={{height:'auto'}}
+                                  src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-7284-61f5-a774-da1412b7629c/raw?se=2025-06-14T07%3A06%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=9d80bc7c-e3f9-590a-a476-d93b4e4b0a2d&skoid=5c72dd08-68ae-4091-b4e1-40ccec0693ae&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-13T22%3A06%3A34Z&ske=2025-06-14T22%3A06%3A34Z&sks=b&skv=2024-08-04&sig=j8BCZxhWMb5DG4HIjul/NWJB440qz9YaWGE2nkENdsE%3D"
+                                  alt="Project Preview"
+                                  data-aos="zoom-in"
+                                  className="absolute inset-0 w-full h-full object-cover"
+                                />
                               </div>
+
+
                             </div>
                           </div>
                         </div>
