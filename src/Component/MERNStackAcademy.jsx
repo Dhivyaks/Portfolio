@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.jpeg'
 import { SiFigma, SiOpenai, SiAdobe, SiJavascript } from "react-icons/si";
@@ -93,8 +93,8 @@ export default function MERNStackAcademy() {
 
     emailjs
       .sendForm(
-        "service_ts2z5tt",    
-        "template_081gefv",    
+        "service_ts2z5tt",
+        "template_081gefv",
         form.current,
         "i6Co8tIuaAVGZBxo0ZEfm"      // ✅ Replace with actual
       )
@@ -306,7 +306,7 @@ export default function MERNStackAcademy() {
                   </a>
 
                   <a
-                    href="/src/assets/Suraj Resume.pdf"
+                    href="/Suraj Resume.pdf"
                     download
                     className="border-2 border-cyan-400/50 text-cyan-400 px-8 py-4 rounded-full hover:bg-cyan-400/10 transition-all flex items-center justify-center space-x-2 hover:scale-105"
                   >
