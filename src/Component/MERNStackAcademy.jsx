@@ -977,6 +977,9 @@ export default function MERNStackAcademy() {
               <form
                 onSubmit={async (e) => {
                   e.preventDefault();
+                  if (isSubmitting) return;
+
+                  setIsSubmitting(true); // disable button
 
                   const name = e.target.name.value;
                   const email = e.target.email.value;
@@ -994,17 +997,23 @@ export default function MERNStackAcademy() {
                     if (res.data.success) {
                       localStorage.setItem('token', res.data.token);
                       localStorage.setItem('user', JSON.stringify(res.data.user));
-                      alert("Feedback sent successfully!");
+
+                      // ✅ show alert using modal-style box
+                      window.alert("✅ Feedback sent successfully!");
+
                       e.target.reset();
                       navigate('/');
                     } else {
-                      alert(res.data.message || "Feedback failed");
+                      alert(res.data.message || "❌ Feedback failed");
                     }
                   } catch (err) {
                     console.error("Submit error:", err);
-                    alert("Something went wrong, please try again.");
+                    alert("❌ Something went wrong, please try again.");
+                  } finally {
+                    setIsSubmitting(false); // re-enable button
                   }
                 }}
+
                 className="space-y-4 md:space-y-6"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -1060,10 +1069,13 @@ export default function MERNStackAcademy() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 md:py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 font-medium"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 md:py-4 rounded-lg transition-all transform hover:scale-105 font-medium ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:from-cyan-600 hover:to-purple-700'
+                    }`}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
+
               </form>
 
             </div>
