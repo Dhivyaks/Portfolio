@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.png'
-
+import { Loader2, Send } from "lucide-react";
 import Api from '../api'
 import { useNavigate } from "react-router-dom";
 import Screenshot1 from '../assets/e1.png';
@@ -1069,13 +1069,32 @@ export default function MERNStackAcademy() {
                   ></textarea>
                 </div>
 
-                <button
+                {/* <button
                   type="submit"
                   disabled={isSubmitting}
                   className={`w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 md:py-4 rounded-lg transition-all transform hover:scale-105 font-medium ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:from-cyan-600 hover:to-purple-700'
                     }`}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
+                </button> */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`relative w-full flex items-center justify-center gap-2  bg-gradient-to-br   to-blue-900  via-black  from-red-900 text-white py-3 md:py-4 rounded-xl transition-all transform font-semibold text-base tracking-wide shadow-lg 
+    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 hover:from-red-600 hover:to-blue-700'}
+  `}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="animate-spin w-5 h-5" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
                 </button>
 
               </form>
