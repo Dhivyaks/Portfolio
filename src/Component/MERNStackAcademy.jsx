@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.jpeg'
+import Api from '../api'
+import { useNavigate } from "react-router-dom";
 import Screenshot1 from '../assets/e1.png';
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 export default function MERNStackAcademy() {
+  const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSection, setActiveSection] = useState('about');
@@ -54,25 +57,29 @@ export default function MERNStackAcademy() {
   const projects = [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
-      "subtitle": "Full Stack MERN Application",
-      "description": "Complete e-commerce solution with user authentication, payment integration, admin dashboard, and real-time inventory management.",
-      "tech": ["React.js", "Node.js", "MongoDB", "Express.js"],
-      "status": "COMPLETED",
+      "title": "Responsive E-Commerce Web App with PWA",
+      "subtitle": "Mobile-First Shopping Experience | MERN Stack",
+      "description": "An intuitive and scalable e-commerce web application built with the MERN stack, featuring a mobile-first design and offline usability through PWA integration. The frontend is fully developed with smooth navigation, dynamic product pages, and a working cart system. Backend modules such as payments, admin controls, and order tracking are under active development.",
+      "tech": ["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "PWA"],
+      "status": "Frontend Ready | Backend In Progress",
       "github": "https://github.com/Suriya2023/Ecoomerce-Frontennd-Backend",
       "live": "https://ecommerce-store-five-jet.vercel.app/",
-      "image": "🛒",
-      "color": "from-blue-500/10 to-purple-600/10",
+      "image": "🛍️",
+      "color": "from-teal-400/10 to-fuchsia-600/10",
       "screenshot": Screenshot1,
       "features": [
-        "User Authentication",
-        "Payment Gateway",
-        "Admin Dashboard",
-        "Inventory Management",
-        "Order Tracking",
-        "Product Reviews"
+        "Progressive Web App (PWA) - Offline Browsing",
+        "Mobile-Optimized Interface",
+        "Product Listings with Manual Filtering",
+        "Interactive Shopping Cart",
+        "User Authentication & Account Creation",
+        "Seamless Navigation System",
+        "Add to Cart and Wishlist Functionality",
+        "Future Additions: Admin Panel, Payments, Inventory, Order System"
       ]
-    },
+    }
+    ,
+
     {
       "id": 2,
       "title": "Social Media Dashboard",
@@ -967,7 +974,41 @@ export default function MERNStackAcademy() {
             <div data-aos="zoom-in" className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">Send Message</h3>
 
-              <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+
+                  const name = e.target.name.value;
+                  const email = e.target.email.value;
+                  const subject = e.target.subject.value; // ✅ fixed
+                  const message = e.target.message.value;
+
+                  try {
+                    const res = await Api.post('/api/send', {
+                      Name: name,           // Make sure keys match backend field names
+                      Email: email,
+                      Subject: subject,
+                      Message: message
+                    });
+
+                    if (res.data.success) {
+                      localStorage.setItem('token', res.data.token);
+                      localStorage.setItem('user', JSON.stringify(res.data.user)); // ✅ use correct field name
+                      alert("Feedback sent successfully!");
+                      e.target.reset(); 
+                      navigate('/');
+                    } else {
+                      alert(res.data.message || "Feedback failed");
+                    }
+                  } catch (err) {
+                    console.error("Register error:", err);
+                    alert("Something went wrong, please try again.");
+                  }
+                }}
+                className="space-y-4 md:space-y-6"
+              >
+
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label className="block text-white font-medium mb-2 text-sm md:text-base">Name</label>
