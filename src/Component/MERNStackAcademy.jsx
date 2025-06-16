@@ -980,12 +980,12 @@ export default function MERNStackAcademy() {
 
                   const name = e.target.name.value;
                   const email = e.target.email.value;
-                  const subject = e.target.subject.value; // ✅ fixed
+                  const subject = e.target.subject.value;
                   const message = e.target.message.value;
 
                   try {
                     const res = await Api.post('/api/send', {
-                      Name: name,           // Make sure keys match backend field names
+                      Name: name,
                       Email: email,
                       Subject: subject,
                       Message: message
@@ -993,33 +993,41 @@ export default function MERNStackAcademy() {
 
                     if (res.data.success) {
                       localStorage.setItem('token', res.data.token);
-                      localStorage.setItem('user', JSON.stringify(res.data.user)); // ✅ use correct field name
+                      localStorage.setItem('user', JSON.stringify(res.data.user));
                       alert("Feedback sent successfully!");
-                      e.target.reset(); 
+                      e.target.reset();
                       navigate('/');
                     } else {
                       alert(res.data.message || "Feedback failed");
                     }
                   } catch (err) {
-                    console.error("Register error:", err);
+                    console.error("Submit error:", err);
                     alert("Something went wrong, please try again.");
                   }
                 }}
                 className="space-y-4 md:space-y-6"
               >
-
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label className="block text-white font-medium mb-2 text-sm md:text-base">Name</label>
-                    <input type="text" name="name" required
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      minLength={2}
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
                       placeholder="Your Name"
                     />
                   </div>
                   <div>
                     <label className="block text-white font-medium mb-2 text-sm md:text-base">Email</label>
-                    <input type="email" name="email" required
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      minLength={5}
+                      pattern="^\S+@\S+\.\S+$"
+                      title="Please enter a valid email address"
                       className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
                       placeholder="your@email.com"
                     />
@@ -1028,7 +1036,11 @@ export default function MERNStackAcademy() {
 
                 <div>
                   <label className="block text-white font-medium mb-2 text-sm md:text-base">Subject</label>
-                  <input type="text" name="subject"
+                  <input
+                    type="text"
+                    name="subject"
+                    required
+                    minLength={2}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
                     placeholder="Project Discussion"
                   />
@@ -1036,7 +1048,11 @@ export default function MERNStackAcademy() {
 
                 <div>
                   <label className="block text-white font-medium mb-2 text-sm md:text-base">Message</label>
-                  <textarea name="message" rows="4" required
+                  <textarea
+                    name="message"
+                    rows="4"
+                    required
+                    minLength={10}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
@@ -1049,6 +1065,7 @@ export default function MERNStackAcademy() {
                   Send Message
                 </button>
               </form>
+
             </div>
           </div>
         </div>
