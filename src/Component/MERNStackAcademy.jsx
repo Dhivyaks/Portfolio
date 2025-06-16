@@ -310,13 +310,25 @@ export default function MERNStackAcademy() {
             </div>
 
             <div className="hidden md:block">
-              <button data-aos="zoom-in" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105">
+              <button
+                onClick={() => {
+                  document.getElementById('hire')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                data-aos="zoom-in"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105"
+              >
                 Hire Me
               </button>
+
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div onClick={() => {
+              document.getElementById('hire')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+              data-aos="zoom-in"
+              className=" md:hidden bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105"
+             >
               <button data-aos="zoom-in" className="text-gray-300">
                 {isMenuOpen ? <X size={24} /> : <Users size={24} />}
               </button>
@@ -840,8 +852,8 @@ export default function MERNStackAcademy() {
       </section>
 
       {/* Education Section */}
-      <section data-aos="zoom-in" id="education" className="py-8 md:py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section  data-aos="zoom-in" id="education" className="py-8 md:py-12 lg:py-16">
+        <div  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-lg px-6 py-3 rounded-full border border-white/10">
               <BookOpen className="w-5 h-5 text-purple-400 animate-pulse" />
@@ -884,12 +896,12 @@ export default function MERNStackAcademy() {
                 </div>
 
                 {/* Current CGPA */}
-                <div className="flex items-center justify-between bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-xl p-4 border border-purple-400/20 mt-4">
+                <div  className="flex items-center justify-between bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-xl p-4 border border-purple-400/20 mt-4">
                   <div className="flex items-center space-x-2">
                     <Award className="w-5 h-5 text-purple-400" />
                     <span className="text-white font-medium text-base">Current CGPA</span>
                   </div>
-                  <div className="text-purple-400 font-bold text-xl">{edu.grade}</div>
+                  <div  className="text-purple-400 font-bold text-xl">{edu.grade}</div>
                 </div>
               </div>
             ))}
@@ -899,8 +911,8 @@ export default function MERNStackAcademy() {
 
 
       {/* Contact Section */}
-      <section data-aos="zoom-in" id="contact" className="py-8 md:py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section  data-aos="zoom-in" id="contact" className="py-8 md:py-12 lg:py-16">
+        <div  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-aos="zoom-in" className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-lg px-4 md:px-6 py-2 md:py-3 rounded-full mb-4 md:mb-6 border border-white/10">
               <Mail className="w-4 h-4 md:w-5 md:h-5 text-cyan-400" />
@@ -914,7 +926,7 @@ export default function MERNStackAcademy() {
             </p>
           </div>
 
-          <div data-aos="zoom-in" className="grid lg:grid-cols-2 gap-8 md:gap-12">
+          <div id='hire' data-aos="zoom-in" className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Info */}
             <div className="space-y-6 md:space-y-8">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
@@ -976,7 +988,7 @@ export default function MERNStackAcademy() {
             <div data-aos="zoom-in" className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/10">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">Send Message</h3>
 
-              <form
+              <form 
                 onSubmit={async (e) => {
                   e.preventDefault();
                   if (isSubmitting) return;
