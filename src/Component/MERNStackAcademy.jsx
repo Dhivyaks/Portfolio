@@ -5,6 +5,8 @@ import { Loader2, Send } from "lucide-react";
 import Api from '../api'
 import { useNavigate } from "react-router-dom";
 import Screenshot1 from '../assets/e1.png';
+import Screenshot2 from '../assets/barber.png';
+import Screenshot3 from '../assets/chat.png';
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -63,7 +65,7 @@ export default function MERNStackAcademy() {
       "subtitle": "Mobile-First Shopping Experience | MERN Stack",
       "description": "An intuitive and scalable e-commerce web application built with the MERN stack, featuring a mobile-first design and offline usability through PWA integration. The frontend is fully developed with smooth navigation, dynamic product pages, and a working cart system. Backend modules such as payments, admin controls, and order tracking are under active development.",
       "tech": ["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "PWA"],
-      "status": "Frontend Ready | Backend In Progress",
+      "status": "Frontend Most of Ready | Backend In Progress",
       "github": "https://github.com/Suriya2023/Ecoomerce-Frontennd-Backend",
       "live": "https://ecommerce-store-five-jet.vercel.app/",
       "image": "🛍️",
@@ -79,111 +81,55 @@ export default function MERNStackAcademy() {
         "Add to Cart and Wishlist Functionality",
         "Future Additions: Admin Panel, Payments, Inventory, Order System"
       ]
-    }
-    ,
+    },
+    {
+      id: 3,
+      title: "Chatrix - Real-Time Chat Application",
+      subtitle: "Vite-Powered Themed Chat with Socket.IO & PWA",
+      description: "Chatrix is a fully featured real-time chat application built using Vite + React, designed with Tailwind CSS and powered by Zustand for dynamic theme management. It supports real-time communication through Socket.IO, with user authentication via JWT tokens and cookie-based session handling. The app is PWA-enabled for installable and offline-ready performance. Users can register, log in, chat in real-time, and personalize their experience using 40+ themes. Cloudinary integration allows seamless image upload. Backend runs on Express.js and MongoDB Atlas, with deployment on Render (currently under maintenance).",
+      tech: ["React.js", "Vite", "Tailwind CSS", "Zustand", "Socket.IO", "Node.js", "Express.js", "MongoDB Atlas", "Cloudinary", "JWT", "Cookies", "PWA"],
+      status: "Frontend Live | Real-time Integration Ongoing",
+      github: "https://github.com/Suriya2023/Chatrix",
+      live: "https://chatrix-gray.vercel.app/login",
+      image: "💬",
+      color: "from-cyan-500/10 to-purple-700/10",
+      screenshot: Screenshot3,
+      features: [
+        "Real-time Messaging with Socket.IO",
+        "JWT Authentication with Cookie Support",
+        "Frontend Built with Vite + React",
+        "Fully Customizable Themes using Zustand",
+        "Tailwind CSS Styling",
+        "User Registration & Login",
+        "Progressive Web App (PWA) Support",
+        "Cloudinary Image Upload Integration",
+        "MongoDB Atlas Database",
+        "Responsive and Installable UI"
+      ]
+    },
+    {
+      id: 2,
+      title: "Barbershop Landing Website",
+      subtitle: "Modern Barber Studio Showcase | React + Firebase",
+      description: "A sleek and responsive landing page for a barbershop, built using React.js and styled from a custom Figma design. The site features an elegant dark UI, animated transitions, and a modern layout that highlights services, team, gallery, and contact. The contact form is fully functional with Firebase integration for real-time message storage. Designed for desktop and mobile, it's deployed live on Vercel for seamless performance.",
+      tech: ["React.js", "Firebase", "Tailwind CSS", "Figma"],
+      status: "Completed & Live",
+      github: "https://github.com/Suriya2023/Barber_Shop",
+      live: "https://barbershop-three-smoky.vercel.app/",
+      image: "💈",
+      color: "from-gray-800/10 to-emerald-600/10",
+      screenshot: Screenshot2,
+      features: [
+        "Modern Barbershop UI from Figma Design",
+        "Responsive Layout with Dark Theme",
+        "Contact Form with Firebase Integration",
+        "Smooth Navigation and Animations",
+        "Team and Service Showcase",
+        "Deployed on Vercel"
+      ]
+    },
 
-    {
-      "id": 2,
-      "title": "Social Media Dashboard",
-      "subtitle": "Real-time Analytics Platform",
-      "description": "Interactive dashboard for social media analytics with real-time data visualization, user engagement metrics, and automated reporting.",
-      "tech": ["React.js", "Express.js", "MongoDB", "Socket.io"],
-      "status": "IN PROGRESS",
-      "github": "#",
-      "live": "#",
-      "image": "📊",
-      "color": "from-green-500/10 to-cyan-600/10",
-      "screenshot": "comming",
-      "features": [
-        "Real-time Analytics",
-        "Data Visualization",
-        "User Metrics",
-        "Automated Reports",
-        "Multi-platform",
-        "Export Data"
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Task Management App",
-      "subtitle": "Collaborative Project Tool",
-      "description": "Team collaboration platform with task assignment, progress tracking, file sharing, and integrated communication features.",
-      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
-      "status": "COMPLETED",
-      "github": "#",
-      "live": "#",
-      "image": "✅",
-      "color": "from-purple-500/10 to-pink-600/10",
-      "screenshot": "URL_TO_SCREENSHOT_3",
-      "features": [
-        "Task Assignment",
-        "Progress Tracking",
-        "File Sharing",
-        "Team Chat",
-        "Deadline Alerts",
-        "Project Timeline"
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Eduport Learning Platform",
-      "subtitle": "Online Course & Teaching App",
-      "description": "A modern education platform for online learning, video lessons, progress tracking, and teacher-student collaboration.",
-      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
-      "status": "IDEA",
-      "github": "#",
-      "live": "#",
-      "image": "📚",
-      "color": "from-yellow-400/10 to-orange-500/10",
-      "screenshot": "URL_TO_SCREENSHOT_4",
-      "features": [
-        "Course Listing",
-        "Video Player",
-        "Progress Tracking",
-        "Instructor Panel",
-        "Student Dashboard"
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Netflix Clone",
-      "subtitle": "Video Streaming Platform",
-      "description": "An OTT platform to browse, preview, and watch movies/TV shows with category filters and watchlist support.",
-      "tech": ["React.js", "Firebase", "TMDB API"],
-      "status": "IN PROGRESS",
-      "github": "#",
-      "live": "#",
-      "image": "🎥",
-      "color": "from-red-500/10 to-black/10",
-      "screenshot": "URL_TO_SCREENSHOT_5",
-      "features": [
-        "User Login",
-        "Movie Categories",
-        "Watchlist",
-        "Trailer Preview",
-        "Dark Theme"
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Service Finder App",
-      "subtitle": "Local Services Hiring Directory",
-      "description": "A platform for users to find and hire local professionals like electricians, tutors, drivers, and more.",
-      "tech": ["React.js", "Node.js", "MongoDB", "JWT"],
-      "status": "PLANNED",
-      "github": "#",
-      "live": "#",
-      "image": "🔧",
-      "color": "from-indigo-500/10 to-yellow-500/10",
-      "screenshot": "URL_TO_SCREENSHOT_6",
-      "features": [
-        "Service Categories",
-        "Booking System",
-        "City-Based Search",
-        "User Reviews",
-        "Contact Integration"
-      ]
-    }
+
   ];
 
   const techStack = [
@@ -722,7 +668,7 @@ export default function MERNStackAcademy() {
                       <div className={`bg-white/5 backdrop-blur-lg rounded-3xl p-4 md:p-6 lg:p-8 border border-white/10 hover:border-cyan-400/30 transition-all mx-2 md:mx-4 bg-gradient-to-br ${project.color}`}>
                         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
                           <div>
-                            <div className="flex items-center space-x-3 md:space-x-4 mb-4 md:mb-6">
+                            <div onClick={() => window.location.href = project.live} className="flex items-center space-x-3 md:space-x-4 mb-4 md:mb-6">
                               <div className="text-4xl md:text-6xl">{project.image}</div>
                               <div>
                                 <div className={`inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium ${project.status === 'COMPLETED'
@@ -800,7 +746,7 @@ export default function MERNStackAcademy() {
                                   <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
                                 </div>
                               </div>
-                              <div className="relative py-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
+                              <div onClick={() => window.location.href = project.live} className="relative cursor-pointer py-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
                                 <img
                                   style={{ height: 'auto' }}
                                   src={project.screenshot}
