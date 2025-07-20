@@ -12,6 +12,7 @@ import Screenshot4 from '../assets/e2.png';
 import Screenshot5 from '../assets/gamming.png';
 import Screenshot2 from '../assets/barber.png';
 import Screenshot7 from '../assets/schoole.png';
+import Screenshot8 from '../assets/serveci.png';
 
 import Screenshot3 from '../assets/chat.png';
 import { motion } from "framer-motion";
@@ -92,6 +93,7 @@ export default function MERNStackAcademy() {
         "Responsive and Installable UI"
       ]
     },
+
     {
       id: 2,
       title: "Barbershop Landing Website",
@@ -137,6 +139,29 @@ export default function MERNStackAcademy() {
         "Built with Clean, Modern UI"
       ]
     },
+        {
+  id: 8,
+  title: "Service Finder Platform UI",
+  subtitle: "Responsive Landing Page for Job & Service Providers",
+  description: "A modern and user-centric landing page designed for a service and job provider platform. Built with HTML, CSS, and JavaScript, the UI mimics the core layout of professional service finder apps. It showcases featured services, categories, provider listings, and a simple call-to-action. The design is responsive and ideal for showcasing concepts like freelancing platforms, home services, or gig marketplaces.",
+  tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+  status: "Frontend Live | UI Concept Only",
+  github: "https://github.com/Suriya2023",
+  live: "https://suriya2023.github.io/Service-Finder/",
+  image: "🧰",
+  color: "from-orange-400/10 to-cyan-600/10",
+  screenshot: Screenshot8,  
+  features: [
+    "Landing Page for Service/Job Finder Platform",
+    "Category-Based Layout (e.g., Plumber, Electrician, etc.)",
+    "Responsive UI Built with HTML, CSS, and JS",
+    "Designed for Desktop and Mobile",
+    "Freelancer & Client-Focused Design Structure",
+    "Clear CTA and Service Showcase Blocks",
+    "Prototype Template for Service Platforms"
+  ]
+},
+
     {
       id: 5,
       title: "Responsive Gaming Website UI",
