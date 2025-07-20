@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Users, Award, Briefcase, Menu, X, Code, Database, Server, Globe, Zap, Trophy, BookOpen, Play, Clock, Star, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Settings, CheckCircle, FolderOpen, Monitor, Smartphone, Tablet, Eye, ChevronLeft, ChevronRight, Twitter, Instagram, Home, User, FileText } from 'lucide-react';
 import Me from '../assets/me.png'
+import { Image } from 'lucide-react';
+
 import { Loader2, Send } from "lucide-react";
 import Api from '../api'
 import { useNavigate } from "react-router-dom";
 import Screenshot1 from '../assets/e1.png';
+import Screenshot6 from '../assets/int.png';
+import Screenshot4 from '../assets/e2.png';
+import Screenshot5 from '../assets/gamming.png';
 import Screenshot2 from '../assets/barber.png';
+import Screenshot7 from '../assets/schoole.png';
+
 import Screenshot3 from '../assets/chat.png';
 import { motion } from "framer-motion";
 import 'aos/dist/aos.css';
@@ -59,36 +66,14 @@ export default function MERNStackAcademy() {
   }, []);
 
   const projects = [
+
     {
-      "id": 1,
-      "title": "Responsive E-Commerce Web App with PWA",
-      "subtitle": "Mobile-First Shopping Experience | MERN Stack",
-      "description": "An intuitive and scalable e-commerce web application built with the MERN stack, featuring a mobile-first design and offline usability through PWA integration. The frontend is fully developed with smooth navigation, dynamic product pages, and a working cart system. Backend modules such as payments, admin controls, and order tracking are under active development.",
-      "tech": ["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "PWA"],
-      "status": "Frontend Most of Ready | Backend In Progress",
-      "github": "https://github.com/Suriya2023/Ecoomerce-Frontennd-Backend",
-      "live": "https://ecommerce-store-five-jet.vercel.app/",
-      "image": "🛍️",
-      "color": "from-teal-400/10 to-fuchsia-600/10",
-      "screenshot": Screenshot1,
-      "features": [
-        "Progressive Web App (PWA) - Offline Browsing",
-        "Mobile-Optimized Interface",
-        "Product Listings with Manual Filtering",
-        "Interactive Shopping Cart",
-        "User Authentication & Account Creation",
-        "Seamless Navigation System",
-        "Add to Cart and Wishlist Functionality",
-        "Future Additions: Admin Panel, Payments, Inventory, Order System"
-      ]
-    },
-    {
-      id: 3,
+      id: 1,
       title: "Chatrix - Real-Time Chat Application",
       subtitle: "Vite-Powered Themed Chat with Socket.IO & PWA",
       description: "Chatrix is a fully featured real-time chat application built using Vite + React, designed with Tailwind CSS and powered by Zustand for dynamic theme management. It supports real-time communication through Socket.IO, with user authentication via JWT tokens and cookie-based session handling. The app is PWA-enabled for installable and offline-ready performance. Users can register, log in, chat in real-time, and personalize their experience using 40+ themes. Cloudinary integration allows seamless image upload. Backend runs on Express.js and MongoDB Atlas, with deployment on Render (currently under maintenance).",
       tech: ["React.js", "Vite", "Tailwind CSS", "Zustand", "Socket.IO", "Node.js", "Express.js", "MongoDB Atlas", "Cloudinary", "JWT", "Cookies", "PWA"],
-      status: "Frontend Live | Real-time Integration Ongoing",
+      status: "Frontend Live | Real-time Integration Ongoing, but Backend Server Currently Unavailable Due to Some Issues",
       github: "https://github.com/Suriya2023/Chatrix",
       live: "https://chatrix-gray.vercel.app/login",
       image: "💬",
@@ -113,7 +98,7 @@ export default function MERNStackAcademy() {
       subtitle: "Modern Barber Studio Showcase | React + Firebase",
       description: "A sleek and responsive landing page for a barbershop, built using React.js and styled from a custom Figma design. The site features an elegant dark UI, animated transitions, and a modern layout that highlights services, team, gallery, and contact. The contact form is fully functional with Firebase integration for real-time message storage. Designed for desktop and mobile, it's deployed live on Vercel for seamless performance.",
       tech: ["React.js", "Firebase", "Tailwind CSS", "Figma"],
-      status: "Completed & Live",
+      status: "Figma Base UI Onnly | Completed & Live",
       github: "https://github.com/Suriya2023/Barber_Shop",
       live: "https://barbershop-three-smoky.vercel.app/",
       image: "💈",
@@ -128,6 +113,124 @@ export default function MERNStackAcademy() {
         "Deployed on Vercel"
       ]
     },
+    {
+      id: 4,
+      title: "E-Commerce Web App",
+      subtitle: "PWA-Powered Shopping Platform | React + Tailwind",
+      description: "A mobile-first, fully responsive e-commerce web application built using React.js, Tailwind CSS, and React Router. The frontend offers an engaging shopping experience with seamless navigation, dark/light theme toggle, and PWA support for installability. Key features include product browsing, add-to-cart functionality, wishlist management, and a responsive design. Backend integration, payments, and order tracking modules are currently under development.",
+      tech: ["React.js", "Tailwind CSS", "React Router", "LocalStorage", "PWA"],
+      status: "Only Frontend UI  Base || Fulll Fetures Added Like Profile , Payment ,Support ,Cart etc... ",
+      github: "https://github.com/Suriya2023/ecommerce",
+      live: "https://suriya2023.github.io/ecommerce/",
+      image: "🛒",
+      color: "from-blue-500/10 to-pink-600/10",
+      screenshot: Screenshot4,
+      features: [
+        "Progressive Web App (PWA) Support - Installable as App",
+        "Dark and Light Mode Toggle",
+        "Mobile-First Fully Responsive Layout",
+        "Product Page with Dynamic Filters",
+        "Add to Cart and Wishlist Functionality",
+        "React Router-Based Page Navigation",
+        "Tailwind CSS Styling and Animations",
+        "LocalStorage-Based Cart/Wishlist Persistence",
+        "Built with Clean, Modern UI"
+      ]
+    },
+    {
+      id: 5,
+      title: "Responsive Gaming Website UI",
+      subtitle: "Grid-Based Layout | Fully Responsive Frontend",
+      description: "A sleek and modern gaming website interface built with HTML, CSS, and JavaScript. Designed using CSS Grid and Flexbox for an adaptive layout that works seamlessly across devices. The UI showcases featured games, trending collections, and a navigation bar — all wrapped in a clean, game-centric design. Built purely for frontend demonstration purposes with a focus on responsiveness and visual appeal.",
+      tech: ["HTML", "CSS", "JavaScript", "CSS Grid", "Responsive Design"],
+      status: "Frontend Live | UI Prototype Only",
+      github: "https://github.com/Suriya2023/Gaming-Websites",
+      live: "https://suriya2023.github.io/Gaming-Websites/",
+      image: "🎮",
+      color: "from-indigo-500/10 to-purple-700/10",
+      screenshot: Screenshot5,
+      features: [
+        "Responsive UI Layout with CSS Grid",
+        "Modern Gaming-Themed Aesthetics",
+        "Homepage with Featured Games Section",
+        "Clean Navigation and Category Cards",
+        "Built with HTML, CSS, and JavaScript Only",
+        "Optimized for Desktop and Mobile Devices",
+        "Ideal as a Landing Page or Game Showcase Template"
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Responsive E-Commerce Web App with PWA",
+      "subtitle": "Mobile-First Shopping Experience | MERN Stack",
+      "description": "An intuitive and scalable e-commerce web application built with the MERN stack, featuring a mobile-first design and offline usability through PWA integration. The frontend is fully developed with smooth navigation, dynamic product pages, and a working cart system. Backend modules such as payments, admin controls, and order tracking are under active development.",
+      "tech": ["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "PWA"],
+      "status": "Frontend Most of Ready | Backend In Progress",
+      "github": "https://github.com/Suriya2023/Ecoomerce-Frontennd-Backend",
+      "live": "https://ecommerce-store-five-jet.vercel.app/",
+      "image": "🛍️",
+      "color": "from-teal-400/10 to-fuchsia-600/10",
+      "screenshot": Screenshot1,
+      "features": [
+        "Progressive Web App (PWA) - Offline Browsing",
+        "Mobile-Optimized Interface",
+        "Product Listings with Manual Filtering",
+        "Interactive Shopping Cart",
+        "User Authentication & Account Creation",
+        "Seamless Navigation System",
+        "Add to Cart and Wishlist Functionality",
+        "Future Additions: Admin Panel, Payments, Inventory, Order System"
+      ]
+    },
+  {
+  id: 6,
+  title: "WebSeries Landing Page",
+  subtitle: "Responsive PWA Landing with Navbar Toggle",
+  description: "A lightweight and responsive landing page built for a fictional WebSeries streaming platform. It features a modern, clean UI with a fully functional mobile-friendly navigation bar, smooth layout transitions, and basic content sections. The project is also a registered Progressive Web App (PWA), making it installable as a standalone app on mobile or desktop devices.",
+  tech: ["HTML", "CSS", "JavaScript", "PWA"],
+  status: "Frontend Live | Basic PWA Setup Completed",
+  github: "https://github.com/Suriya2023/WebSeries",
+  live: "https://suriya2023.github.io/WebSeries/",
+  image: "📺",
+  color: "from-yellow-400/10 to-indigo-600/10",
+  screenshot: Screenshot6, 
+  features: [
+    "Simple and Clean Landing Page",
+    "Responsive Design with Navbar Toggle",
+    "Progressive Web App (PWA) Support",
+    "Mobile-Friendly Layout",
+    "Installable as Web App",
+    "Basic Styling with Focused Content Structure",
+    "Built with Vanilla HTML, CSS, and JS"
+  ]
+}
+,
+{
+  id: 7,
+  title: "School Website Landing Page - S.V.",
+  subtitle: "Responsive React UI for Educational Institution",
+  description: "A professional and responsive school landing page designed using React.js and Tailwind CSS. This project serves as the homepage for a fictional educational institution named S.V., featuring a clean layout, informative sections, and a user-friendly interface. The site includes sections like About, Courses, Facilities, and Contact — optimized for both desktop and mobile views.",
+  tech: ["React.js", "Tailwind CSS", "Responsive Design"],
+  status: "Frontend Live | UI-Only Educational Template",
+  github: "https://github.com/Suriya2023/S.V.-",
+  live: "https://suriya2023.github.io/S.V.-/",
+  image: "🏫",
+  color: "from-sky-400/10 to-emerald-500/10",
+  screenshot: Screenshot7, 
+  features: [
+    "Educational Institution Landing Page",
+    "Built with React and Tailwind CSS",
+    "Fully Responsive Design",
+    "Modern Section-Based Layout (Hero, About, Courses, Contact)",
+    "Optimized for Mobile and Desktop",
+    "Clean and Simple Educational UI",
+    "Ideal Template for Schools or Colleges"
+  ]
+}
+
+
+
 
 
   ];
@@ -135,9 +238,19 @@ export default function MERNStackAcademy() {
   const techStack = [
     { name: "MongoDB", icon: Database, color: "from-green-400 to-green-600", level: "85%" },
     { name: "Express.js", icon: Server, color: "from-gray-600 to-gray-800", level: "80%" },
+    { name: "Node.js", icon: Globe, color: "from-green-500 to-green-700", level: "85%" },
+
     { name: "React.js", icon: Code, color: "from-blue-400 to-blue-600", level: "90%" },
-    { name: "Node.js", icon: Globe, color: "from-green-500 to-green-700", level: "85%" }
+        { name: "C Language", icon: Code, color: "from-blue-500 to-blue-700", level: "65%" },
+    { name: "Python", icon: Code, color: "from-blue-500 to-blue-700", level: "65%" },
+    { name: "jQuery", icon: Monitor, color: "from-purple-400 to-purple-600", level: "75%" },
+    { name: "SQL", icon: Database, color: "from-indigo-400 to-indigo-600", level: "75%" },
+  
+
+    { name: "Figma", icon: Smartphone, color: "from-pink-400 to-pink-600", level: "80%" },
+    { name: "Canva", icon: Image, color: "from-cyan-400 to-cyan-600", level: "75%" },
   ];
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -656,118 +769,115 @@ export default function MERNStackAcademy() {
               </p>
             </div>
 
-            {/* Enhanced Project Carousel */}
-            <div data-aos="zoom-in" className="relative">
-              <div className="overflow-hidden rounded-3xl">
-                <div
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            {/* ✅ Project Carousel with dynamic height */}
+            <div className="relative w-full">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                  transition={{ duration: 0.5 }}
+                  className={`absolute top-0 left-0 w-full transition-all duration-500 ease-in-out ${index === currentSlide ? 'relative z-10 opacity-100' : 'opacity-0 -z-10 pointer-events-none'
+                    }`}
                 >
-                  {projects.map((project, index) => (
-                    <div key={project.id} className="w-full flex-shrink-0">
-                      <div className={`bg-white/5 backdrop-blur-lg rounded-3xl p-4 md:p-6 lg:p-8 border border-white/10 hover:border-cyan-400/30 transition-all mx-2 md:mx-4 bg-gradient-to-br ${project.color}`}>
-                        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+                  <div
+                    className={`bg-white/5 backdrop-blur-lg rounded-3xl p-4 md:p-6 lg:p-8 border border-white/10 hover:border-cyan-400/30 transition-all mx-2 md:mx-4 bg-gradient-to-br ${project.color}`}
+                  >
+                    <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+                      {/* Info */}
+                      <div>
+                        <div onClick={() => window.location.href = project.live} className="flex items-center space-x-3 md:space-x-4 mb-4 md:mb-6">
+                          <div className="text-4xl md:text-6xl">{project.image}</div>
                           <div>
-                            <div onClick={() => window.location.href = project.live} className="flex items-center space-x-3 md:space-x-4 mb-4 md:mb-6">
-                              <div className="text-4xl md:text-6xl">{project.image}</div>
-                              <div>
-                                <div className={`inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium ${project.status === 'COMPLETED'
-                                  ? 'bg-green-500/20 text-green-400 border border-green-400/30'
-                                  : 'bg-yellow-500/20 text-yellow-400 border border-yellow-400/30'
-                                  }`}>
-                                  <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full mr-1 md:mr-2 ${project.status === 'COMPLETED' ? 'bg-green-400' : 'bg-yellow-400'
-                                    } animate-pulse`}></div>
-                                  {project.status}
-                                </div>
-                              </div>
-                            </div>
-
-                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">{project.title}</h3>
-                            <p className="text-cyan-400 text-lg md:text-xl mb-4 md:mb-6 font-medium">{project.subtitle}</p>
-                            <p className="text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8">{project.description}</p>
-
-                            <div className="mb-6 md:mb-8">
-                              <h4 className="text-white font-semibold mb-3 md:mb-4 flex items-center text-sm md:text-base">
-                                <Settings className="w-4 h-4 md:w-5 md:h-5 text-cyan-400 mr-2" />
-                                Key Features
-                              </h4>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-                                {project.features.map((feature, featureIndex) => (
-                                  <div key={featureIndex} className="flex items-center space-x-2">
-                                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-400 flex-shrink-0" />
-                                    <span className="text-gray-300 text-xs md:text-sm">{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-
-                            <div data-aos="zoom-in" className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
-                              {project.tech.map((tech, techIndex) => (
-                                <span key={techIndex} className="px-3 md:px-4 py-1.5 md:py-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 text-cyan-400 rounded-full text-xs md:text-sm border border-cyan-400/30 font-medium">
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-
-                            <div data-aos="zoom-in" className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                              <button
-                                onClick={() => {
-                                  window.location.href = project.github;
-                                }}
-                                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105"
-                              >
-                                <Github className="w-4 h-4 md:w-5 md:h-5" />
-                                <span className="font-medium text-sm md:text-base">View Code</span>
-                              </button>
-
-                              <button
-                                onClick={() => {
-                                  window.location.href = project.live;
-                                }}
-                                className="flex items-center justify-center space-x-2 border-2 border-cyan-400/50 text-cyan-400 px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:border-cyan-400 hover:bg-cyan-400/10 transition-all"
-                              >
-                                <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
-                                <span className="font-medium text-sm md:text-base">Live Demo</span>
-                              </button>
-
+                            <div className={`inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium ${project.status.includes('COMPLETED')
+                              ? 'bg-green-500/20 text-green-400 border border-green-400/30'
+                              : 'bg-yellow-500/20 text-yellow-400 border border-yellow-400/30'
+                              }`}>
+                              <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full mr-1 md:mr-2 ${project.status.includes('COMPLETED') ? 'bg-green-400' : 'bg-yellow-400'
+                                } animate-pulse`}></div>
+                              {project.status}
                             </div>
                           </div>
+                        </div>
 
-                          {/* Project Preview */}
-                          <div data-aos="zoom-in" className="relative">
-                            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10">
-                              <div className="flex items-center space-x-2 mb-4 md:mb-6">
-                                <div className="flex space-x-1">
-                                  <div data-aos="zoom-in" className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full"></div>
-                                  <div data-aos="zoom-in" className="w-2 h-2 md:w-3 md:h-3 bg-yellow-500 rounded-full"></div>
-                                  <div data-aos="zoom-in" className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full"></div>
-                                </div>
-                                <div className="flex-1 bg-slate-700/50 rounded-full h-6 md:h-8 flex items-center px-3 md:px-4">
-                                  <span data-aos="zoom-in" className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
-                                </div>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">{project.title}</h3>
+                        <p className="text-cyan-400 text-lg md:text-xl mb-4 md:mb-6 font-medium">{project.subtitle}</p>
+                        <p className="text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8">{project.description}</p>
+
+                        {/* Features */}
+                        <div className="mb-6 md:mb-8">
+                          <h4 className="text-white font-semibold mb-3 md:mb-4 flex items-center text-sm md:text-base">
+                            <Settings className="w-4 h-4 md:w-5 md:h-5 text-cyan-400 mr-2" />
+                            Key Features
+                          </h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
+                            {project.features.map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-center space-x-2">
+                                <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-400 flex-shrink-0" />
+                                <span className="text-gray-300 text-xs md:text-sm">{feature}</span>
                               </div>
-                              <div onClick={() => window.location.href = project.live} className="relative cursor-pointer py-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
-                                <img
-                                  style={{ height: 'auto' }}
-                                  src={project.screenshot}
-                                  alt="Project Preview"
-                                  data-aos="zoom-in"
-                                  className="absolute inset-0 w-full h-full object-cover"
-                                />
-                              </div>
+                            ))}
+                          </div>
+                        </div>
 
+                        {/* Tech Stack */}
+                        <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
+                          {project.tech.map((tech, techIndex) => (
+                            <span key={techIndex} className="px-3 md:px-4 py-1.5 md:py-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 text-cyan-400 rounded-full text-xs md:text-sm border border-cyan-400/30 font-medium">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
 
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                          <button
+                            onClick={() => window.location.href = project.github}
+                            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105"
+                          >
+                            <Github className="w-4 h-4 md:w-5 md:h-5" />
+                            <span className="font-medium text-sm md:text-base">View Code</span>
+                          </button>
+
+                          <button
+                            onClick={() => window.location.href = project.live}
+                            className="flex items-center justify-center space-x-2 border-2 border-cyan-400/50 text-cyan-400 px-4 md:px-6 py-2.5 md:py-3 rounded-full hover:border-cyan-400 hover:bg-cyan-400/10 transition-all"
+                          >
+                            <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
+                            <span className="font-medium text-sm md:text-base">Live Demo</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Image Preview */}
+                      <div className="relative">
+                        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10">
+                          <div className="flex items-center space-x-2 mb-4 md:mb-6">
+                            <div className="flex space-x-1">
+                              <div className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 bg-yellow-500 rounded-full"></div>
+                              <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full"></div>
                             </div>
+                            <div className="flex-1 bg-slate-700/50 rounded-full h-6 md:h-8 flex items-center px-3 md:px-4">
+                              <span className="text-gray-400 text-xs md:text-sm">http://localhost:5173</span>
+                            </div>
+                          </div>
+                          <div onClick={() => window.location.href = project.live} className="relative cursor-pointer py-5 bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl h-32 md:h-48 lg:h-64 border border-white/5 overflow-hidden">
+                            <img
+                              src={project.screenshot}
+                              alt="Project Preview"
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
+                </motion.div>
+              ))}
 
               {/* Navigation Controls */}
-              <div data-aos="zoom-in" className="flex justify-center items-center space-x-4 mt-6 md:mt-8">
+              <div className="flex justify-center items-center space-x-4 mt-6 md:mt-8">
                 <button
                   onClick={prevSlide}
                   className="bg-white/10 hover:bg-white/20 text-white p-2 md:p-3 rounded-full transition-all hover:scale-110 border border-white/20"
@@ -775,20 +885,20 @@ export default function MERNStackAcademy() {
                   <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
 
-                <div data-aos="zoom-in" className="flex space-x-2">
+                <div className="flex space-x-2">
                   {projects.map((_, index) => (
-                    <button data-aos="zoom-in"
+                    <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${index === currentSlide
-                        ? 'bg-cyan-400 scale-125'
-                        : 'bg-white/30 hover:bg-white/50'
+                          ? 'bg-cyan-400 scale-125'
+                          : 'bg-white/30 hover:bg-white/50'
                         }`}
                     />
                   ))}
                 </div>
 
-                <button data-aos="zoom-in"
+                <button
                   onClick={nextSlide}
                   className="bg-white/10 hover:bg-white/20 text-white p-2 md:p-3 rounded-full transition-all hover:scale-110 border border-white/20"
                 >
@@ -798,8 +908,8 @@ export default function MERNStackAcademy() {
             </div>
           </div>
         </motion.div>
-
       </section>
+
 
       {/* Education Section */}
       <section data-aos="zoom-in" id="education" className="py-8 md:py-12 lg:py-16">
