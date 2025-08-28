@@ -13,6 +13,7 @@ import Screenshot5 from '../assets/gamming.png';
 import Screenshot2 from '../assets/barber.png';
 import Screenshot7 from '../assets/schoole.png';
 import Screenshot8 from '../assets/serveci.png';
+import Screenshot9 from '../assets/book.png';
 
 import Screenshot3 from '../assets/chat.png';
 import { motion } from "framer-motion";
@@ -28,17 +29,15 @@ export default function MERNStackAcademy() {
 
 
   useEffect(() => {
-    // Simulate full page load (aap chahe to yahan API ya image load bhi check kar sakte ho)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 2 second tak loading dikhana
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
 
 
-  // Track active section for mobile navigation
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about', 'skills', 'projects', 'education', 'contact'];
@@ -61,37 +60,49 @@ export default function MERNStackAcademy() {
   }, []);
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration in ms
-      once: true,     // only animate once per scroll
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   const projects = [
 
+
     {
       id: 1,
-      title: "Chatrix - Real-Time Chat Application",
-      subtitle: "Vite-Powered Themed Chat with Socket.IO & PWA",
-      description: "Chatrix is a fully featured real-time chat application built using Vite + React, designed with Tailwind CSS and powered by Zustand for dynamic theme management. It supports real-time communication through Socket.IO, with user authentication via JWT tokens and cookie-based session handling. The app is PWA-enabled for installable and offline-ready performance. Users can register, log in, chat in real-time, and personalize their experience using 40+ themes. Cloudinary integration allows seamless image upload. Backend runs on Express.js and MongoDB Atlas, with deployment on Render (currently under maintenance).",
-      tech: ["React.js", "Vite", "Tailwind CSS", "Zustand", "Socket.IO", "Node.js", "Express.js", "MongoDB Atlas", "Cloudinary", "JWT", "Cookies", "PWA"],
-      status: "Frontend Live | Real-time Integration Ongoing, but Backend Server Currently Unavailable Due to Some Issues",
-      github: "https://github.com/Suriya2023/Chatrix",
-      live: "https://chatrix-gray.vercel.app/login",
-      image: "💬",
-      color: "from-cyan-500/10 to-purple-700/10",
-      screenshot: Screenshot3,
+      title: "BookVerse - Interactive Library Management System",
+      subtitle: "Seamless Book Exploration with Dynamic UI & Responsive Design",
+      description: "BookVerse is a modern and elegant frontend library management system crafted with Bootstrap 5, jQuery, and Swiper.js. It provides users with a visually engaging way to explore books, authors, and collections. With dynamic content loading, users can browse different sections such as About, Books, and Contact without full page reloads. Carousels powered by Owl Carousel & Swiper.js enhance interactivity, while the responsive design ensures smooth usability across devices. The system also features a personalized user dashboard with reading progress tracking and profile management. Future plans include backend integration with Node.js + MongoDB for full-scale management, user roles, and book issue/return tracking.",
+      tech: [
+        "HTML5",
+        "CSS3",
+        "Bootstrap 5",
+        "jQuery",
+        "Owl Carousel",
+        "Swiper.js",
+        "Font Awesome",
+        "Custom CSS/JS"
+      ],
+      status: "Frontend Completed | Backend Integration (Node.js + MongoDB) Planned",
+      github: "https://github.com/Suriya2023/Books_Library_New_Ui-",
+      live: "https://your-live-demo-link.com",
+      image: "📚",
+      color: "from-yellow-500/10 to-indigo-700/10",
+      screenshot: Screenshot9, 
       features: [
-        "Real-time Messaging with Socket.IO",
-        "JWT Authentication with Cookie Support",
-        "Frontend Built with Vite + React",
-        "Fully Customizable Themes using Zustand",
-        "Tailwind CSS Styling",
-        "User Registration & Login",
-        "Progressive Web App (PWA) Support",
-        "Cloudinary Image Upload Integration",
-        "MongoDB Atlas Database",
-        "Responsive and Installable UI"
+        "Dynamic Content Loading without Page Refresh",
+        "Book & Author Carousels with Owl Carousel & Swiper.js",
+        "Sidebar Navigation with User Dashboard",
+        "Reading Progress Tracking",
+        "Mobile-Friendly Responsive Design",
+        "Clean, Modern & Minimal UI",
+        "Personalized User Profile Section",
+        "Integration-Ready Architecture for Backend",
+        "Analytics Dashboard for Book Insights",
+        "Future Ready: Login System & Book Issue/Return Tracking"
       ]
+
+
     },
 
     {
@@ -139,28 +150,28 @@ export default function MERNStackAcademy() {
         "Built with Clean, Modern UI"
       ]
     },
-        {
-  id: 8,
-  title: "Service Finder Platform UI",
-  subtitle: "Responsive Landing Page for Job & Service Providers",
-  description: "A modern and user-centric landing page designed for a service and job provider platform. Built with HTML, CSS, and JavaScript, the UI mimics the core layout of professional service finder apps. It showcases featured services, categories, provider listings, and a simple call-to-action. The design is responsive and ideal for showcasing concepts like freelancing platforms, home services, or gig marketplaces.",
-  tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-  status: "Frontend Live | UI Concept Only",
-  github: "https://github.com/Suriya2023",
-  live: "https://suriya2023.github.io/Service-Finder/",
-  image: "🧰",
-  color: "from-orange-400/10 to-cyan-600/10",
-  screenshot: Screenshot8,  
-  features: [
-    "Landing Page for Service/Job Finder Platform",
-    "Category-Based Layout (e.g., Plumber, Electrician, etc.)",
-    "Responsive UI Built with HTML, CSS, and JS",
-    "Designed for Desktop and Mobile",
-    "Freelancer & Client-Focused Design Structure",
-    "Clear CTA and Service Showcase Blocks",
-    "Prototype Template for Service Platforms"
-  ]
-},
+    {
+      id: 8,
+      title: "Service Finder Platform UI",
+      subtitle: "Responsive Landing Page for Job & Service Providers",
+      description: "A modern and user-centric landing page designed for a service and job provider platform. Built with HTML, CSS, and JavaScript, the UI mimics the core layout of professional service finder apps. It showcases featured services, categories, provider listings, and a simple call-to-action. The design is responsive and ideal for showcasing concepts like freelancing platforms, home services, or gig marketplaces.",
+      tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      status: "Frontend Live | UI Concept Only",
+      github: "https://github.com/Suriya2023",
+      live: "https://suriya2023.github.io/Service-Finder/",
+      image: "🧰",
+      color: "from-orange-400/10 to-cyan-600/10",
+      screenshot: Screenshot8,
+      features: [
+        "Landing Page for Service/Job Finder Platform",
+        "Category-Based Layout (e.g., Plumber, Electrician, etc.)",
+        "Responsive UI Built with HTML, CSS, and JS",
+        "Designed for Desktop and Mobile",
+        "Freelancer & Client-Focused Design Structure",
+        "Clear CTA and Service Showcase Blocks",
+        "Prototype Template for Service Platforms"
+      ]
+    },
 
     {
       id: 5,
@@ -208,51 +219,51 @@ export default function MERNStackAcademy() {
         "Future Additions: Admin Panel, Payments, Inventory, Order System"
       ]
     },
-  {
-  id: 6,
-  title: "WebSeries Landing Page",
-  subtitle: "Responsive PWA Landing with Navbar Toggle",
-  description: "A lightweight and responsive landing page built for a fictional WebSeries streaming platform. It features a modern, clean UI with a fully functional mobile-friendly navigation bar, smooth layout transitions, and basic content sections. The project is also a registered Progressive Web App (PWA), making it installable as a standalone app on mobile or desktop devices.",
-  tech: ["HTML", "CSS", "JavaScript", "PWA"],
-  status: "Frontend Live | Basic PWA Setup Completed",
-  github: "https://github.com/Suriya2023/WebSeries",
-  live: "https://suriya2023.github.io/WebSeries/",
-  image: "📺",
-  color: "from-yellow-400/10 to-indigo-600/10",
-  screenshot: Screenshot6, 
-  features: [
-    "Simple and Clean Landing Page",
-    "Responsive Design with Navbar Toggle",
-    "Progressive Web App (PWA) Support",
-    "Mobile-Friendly Layout",
-    "Installable as Web App",
-    "Basic Styling with Focused Content Structure",
-    "Built with Vanilla HTML, CSS, and JS"
-  ]
-}
-,
-{
-  id: 7,
-  title: "School Website Landing Page - S.V.",
-  subtitle: "Responsive React UI for Educational Institution",
-  description: "A professional and responsive school landing page designed using React.js and Tailwind CSS. This project serves as the homepage for a fictional educational institution named S.V., featuring a clean layout, informative sections, and a user-friendly interface. The site includes sections like About, Courses, Facilities, and Contact — optimized for both desktop and mobile views.",
-  tech: ["React.js", "Tailwind CSS", "Responsive Design"],
-  status: "Frontend Live | UI-Only Educational Template",
-  github: "https://github.com/Suriya2023/S.V.-",
-  live: "https://suriya2023.github.io/S.V.-/",
-  image: "🏫",
-  color: "from-sky-400/10 to-emerald-500/10",
-  screenshot: Screenshot7, 
-  features: [
-    "Educational Institution Landing Page",
-    "Built with React and Tailwind CSS",
-    "Fully Responsive Design",
-    "Modern Section-Based Layout (Hero, About, Courses, Contact)",
-    "Optimized for Mobile and Desktop",
-    "Clean and Simple Educational UI",
-    "Ideal Template for Schools or Colleges"
-  ]
-}
+    {
+      id: 6,
+      title: "WebSeries Landing Page",
+      subtitle: "Responsive PWA Landing with Navbar Toggle",
+      description: "A lightweight and responsive landing page built for a fictional WebSeries streaming platform. It features a modern, clean UI with a fully functional mobile-friendly navigation bar, smooth layout transitions, and basic content sections. The project is also a registered Progressive Web App (PWA), making it installable as a standalone app on mobile or desktop devices.",
+      tech: ["HTML", "CSS", "JavaScript", "PWA"],
+      status: "Frontend Live | Basic PWA Setup Completed",
+      github: "https://github.com/Suriya2023/WebSeries",
+      live: "https://suriya2023.github.io/WebSeries/",
+      image: "📺",
+      color: "from-yellow-400/10 to-indigo-600/10",
+      screenshot: Screenshot6,
+      features: [
+        "Simple and Clean Landing Page",
+        "Responsive Design with Navbar Toggle",
+        "Progressive Web App (PWA) Support",
+        "Mobile-Friendly Layout",
+        "Installable as Web App",
+        "Basic Styling with Focused Content Structure",
+        "Built with Vanilla HTML, CSS, and JS"
+      ]
+    }
+    ,
+    {
+      id: 7,
+      title: "School Website Landing Page - S.V.",
+      subtitle: "Responsive React UI for Educational Institution",
+      description: "A professional and responsive school landing page designed using React.js and Tailwind CSS. This project serves as the homepage for a fictional educational institution named S.V., featuring a clean layout, informative sections, and a user-friendly interface. The site includes sections like About, Courses, Facilities, and Contact — optimized for both desktop and mobile views.",
+      tech: ["React.js", "Tailwind CSS", "Responsive Design"],
+      status: "Frontend Live | UI-Only Educational Template",
+      github: "https://github.com/Suriya2023/S.V.-",
+      live: "https://suriya2023.github.io/S.V.-/",
+      image: "🏫",
+      color: "from-sky-400/10 to-emerald-500/10",
+      screenshot: Screenshot7,
+      features: [
+        "Educational Institution Landing Page",
+        "Built with React and Tailwind CSS",
+        "Fully Responsive Design",
+        "Modern Section-Based Layout (Hero, About, Courses, Contact)",
+        "Optimized for Mobile and Desktop",
+        "Clean and Simple Educational UI",
+        "Ideal Template for Schools or Colleges"
+      ]
+    }
 
 
 
@@ -266,11 +277,11 @@ export default function MERNStackAcademy() {
     { name: "Node.js", icon: Globe, color: "from-green-500 to-green-700", level: "85%" },
 
     { name: "React.js", icon: Code, color: "from-blue-400 to-blue-600", level: "90%" },
-        { name: "C Language", icon: Code, color: "from-blue-500 to-blue-700", level: "65%" },
+    { name: "C Language", icon: Code, color: "from-blue-500 to-blue-700", level: "65%" },
     { name: "Python", icon: Code, color: "from-blue-500 to-blue-700", level: "65%" },
     { name: "jQuery", icon: Monitor, color: "from-purple-400 to-purple-600", level: "75%" },
     { name: "SQL", icon: Database, color: "from-indigo-400 to-indigo-600", level: "75%" },
-  
+
 
     { name: "Figma", icon: Smartphone, color: "from-pink-400 to-pink-600", level: "80%" },
     { name: "Canva", icon: Image, color: "from-cyan-400 to-cyan-600", level: "75%" },
@@ -286,7 +297,7 @@ export default function MERNStackAcademy() {
         "service_ts2z5tt",
         "template_081gefv",
         form.current,
-        "i6Co8tIuaAVGZBxo0ZEfm"      // ✅ Replace with actual
+        "i6Co8tIuaAVGZBxo0ZEfm"
       )
       .then(
         (result) => {
@@ -521,7 +532,7 @@ export default function MERNStackAcademy() {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full hover:scale-110 transition-transform duration-300 flex items-center justify-center space-x-2"
                   >
                     <Mail className="w-5 h-5" />
-                    <span>Get In Touch</span>
+                    <span >Get In Touch</span>
                   </a>
 
                   <a href="/suraj-resume.pdf"
@@ -592,7 +603,6 @@ export default function MERNStackAcademy() {
         </div>
       </section>
 
-      {/* is ko unique bnao mere linkedin releted content add karo */}
 
       {/* Contact Info */}
       <section data-aos="fade-up" className="py-10 md:py-16 bg-black/5 dark:bg-black/20 rounded-3xl">
@@ -916,8 +926,8 @@ export default function MERNStackAcademy() {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${index === currentSlide
-                          ? 'bg-cyan-400 scale-125'
-                          : 'bg-white/30 hover:bg-white/50'
+                        ? 'bg-cyan-400 scale-125'
+                        : 'bg-white/30 hover:bg-white/50'
                         }`}
                     />
                   ))}
